@@ -1,20 +1,8 @@
 pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                //
-            }
-        }
-        stage('Test') {
-            steps {
-                //
-            }
-        }
-        stage('Deploy') {
-            steps {
-                //
-            }
-        }
-    }
-}
+  agent any stages {
+  stage ('Deploy stage') {
+  when { branch 'master' } steps {
+  echo 'Deploy master to stage' ... }
+  }
+  }
+} 
