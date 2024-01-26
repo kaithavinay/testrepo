@@ -1,20 +1,20 @@
-pipeline{
-  agent none
-  stages{
-    stage('QA'){
-      agent{
-        label 'TestExecute'
-      }
-      steps{
-        testcompletetest credentialsId: 'tester',
-          executorType: 'TE',
-          launchType: 'lcRoutine',
-          project: 'TestProject1',
-          routine: 'Test1',
-          suite: 'ProjectSuite1\\ProjectSuite1.pjs',
-          unit: 'Unit1',
-          useTCService: true
-       }
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                //
+            }
+        }
+        stage('Test') {
+            steps {
+                //
+            }
+        }
+        stage('Deploy') {
+            steps {
+                //
+            }
+        }
     }
-  }
 }
